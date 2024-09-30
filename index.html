@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Fitness Tracker Dashboard</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Log Activity Section -->
+        <section id="log-activity">
+            <h2>Log Your Activity</h2>
+            <form id="activity-form">
+                <label for="activity-type">Activity Type:</label>
+                <select id="activity-type" required>
+                    <option value="run">Running</option>
+                    <option value="swim">Swimming</option>
+                    <option value="cycle">Cycling</option>
+                </select>
+
+                <label for="duration">Duration (minutes):</label>
+                <input type="number" id="duration" min="1" required>
+
+                <label for="distance">Distance (km):</label>
+                <input type="number" id="distance" min="0.1" step="0.1" required>
+
+                <button type="submit">Log Activity</button>
+            </form>
+        </section>
+
+        <!-- Statistics Section -->
+        <section id="stats">
+            <h2>Statistics</h2>
+            <p>Total Activities: <span id="total-activities">0</span></p>
+            <p>Total Calories Burned: <span id="total-calories">0</span> kcal</p>
+            <p>Total Distance Covered: <span id="total-distance">0</span> km</p>
+        </section>
+
+        <!-- Recommendation Section -->
+        <section id="recommendation">
+            <h2>Recommended Workout</h2>
+            <p id="workout-recommendation">Start logging your activities to receive recommendations!</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
